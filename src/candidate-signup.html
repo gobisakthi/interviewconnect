@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candidate Signup</title>
+  <link rel="stylesheet" href="css/candidate-signup-styles.css">
+  <link rel="stylesheet" href="css/menu-styles.css">
+   <link rel="stylesheet" href="css/email-verification-styles.css">
+  </head>
+
+<body>
+  <header>
+    <div class="center-header">
+      <h1>Candidate Signup Screen</h1>
+    </div>
+  </header>
+
+  <!-- Menu Section -->
+  <section>
+    <nav class="menu-section">
+      <ul class="menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="for-candidate.html">For Candidates</a></li>
+        <li><a href="for-interviewer.html">For Interviewers</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <div class="signup-container">
+    <h2>Candidate Signup</h2>
+    <form id="signupForm">
+      <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+      <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+      <input type="password" id="password" name="password" placeholder="Password (8 or more chars)" required>
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+    </form>
+    <button type="submit" onclick="openEmailVerificationPopup()">Signup</button>
+    <div class="signup-link">Already have an account? <a href="candidate-login.html">Login</a></div>
+  </div>
+
+  <!-- Email Verification Popup -->
+  <div id="emailVerificationPopup">
+    <div id="verificationContent">
+      <p><strong>Please verify your email</strong></p>
+      <p>You're almost there! We sent a verification link to <span id="userEmail"></span>. Just click on the link in that email to complete the signup.</p>
+      <p>If you don't see the email, you may need to check your spam folder. Still can't find it? No problem, <span id="resendVerification" onclick="resendVerification()">Resend Verification Email</span>.</p>
+    </div>
+  </div>
+
+  <script>
+    function openEmailVerificationPopup() {
+      // Add logic here to handle email verification and show the popup
+      const userEmail = document.getElementById('email').value;
+      document.getElementById('userEmail').innerText = userEmail;
+      document.getElementById('emailVerificationPopup').style.display = 'block';
+    }
+
+    function resendVerification() {
+      // Add logic here to handle resend verification email
+      // You can use the email entered in document.getElementById('email').value
+      alert('Resending verification email...');
+    }
+  </script>
+</body>
+
+</html>

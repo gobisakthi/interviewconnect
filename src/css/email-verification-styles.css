@@ -1,0 +1,31 @@
+/* Additional styles for the email verification popup */
+    #emailVerificationPopup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    #verificationContent {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #resendVerification {
+      margin-top: 10px;
+      color: #007bff;
+      cursor: pointer;
+    }
+
+    #userEmail {
+      font-weight: bold; /* Make the email address bold */
+    }
