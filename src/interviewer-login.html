@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interviewer Login</title>
+  <link rel="stylesheet" href="css/interviewer-login-styles.css">
+  <link rel="stylesheet" href="css/forget.css">
+  <link rel="stylesheet" href="css/menu-styles.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="center-header">
+      <h1>Interviewer Login Screen</h1>
+    </div>
+  </header>
+
+  <!-- Menu Section -->
+  <section>
+    <nav class="menu-section">
+      <ul class="menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="for-interviewer.html">For Interviewers</a></li>
+        <li><a href="for-interviewer.html">For Interviewers</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <div class="login-container">
+    <h2>Interviewer Login</h2>
+    <form>
+      <input type="text" id="emailMobile" name="emailMobile" placeholder="Email or Mobile" required>
+      <br>
+      <input type="password" id="password" name="password" placeholder="Password" required>
+      <br>
+    </form>
+    <div class="forgot-link" onclick="openPopup()">Forgot Password?</div>
+    <button type="submit">Login</button>
+	 <div class="signup-link">Don't have an Account? <a href="interviewer-signup.html">Sign Up</a></div>
+  </div>
+
+  <!-- Forget Password Popup -->
+  <div class="popup-container" id="popupContainer">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2>Forget Password?</h2>
+      <p>Enter your email address or mobile number, and we will send instructions to reset your password.</p>
+      <input type="text" id="forgetEmail" placeholder="Enter Email or Mobile" required>
+      <br>
+      <button type="button" onclick="submitForgetPassword()">Submit</button>
+    </div>
+  </div>
+
+  <script>
+    function openPopup() {
+      document.getElementById('popupContainer').style.display = 'flex';
+    }
+
+    function closePopup() {
+      document.getElementById('popupContainer').style.display = 'none';
+    }
+
+    function submitForgetPassword() {
+      // Add logic to handle forget password submission
+      // You can use the email/mobile entered in document.getElementById('forgetEmail').value
+    }
+  </script>
+
+</body>
+
+</html>

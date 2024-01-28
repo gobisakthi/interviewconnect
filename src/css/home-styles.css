@@ -1,0 +1,149 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #6fa5d2; /* Adjusted shade of blue color */
+  color: #333;
+  padding: 0.1em;
+  align-items: center;
+  margin-bottom: 0; /* Remove default margin */
+}
+
+.left-header,
+.right-header,
+.center-header {
+  display: flex;
+  align-items: center;
+}
+
+.header-item h1 {
+  margin: 0;
+}
+
+.left-header h1,
+.right-header h1,
+.center-header h1 {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.left-header .header-item,
+.right-header .header-item {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.left-header .header-item button,
+.right-header .header-item button {
+  padding: 8px 16px;
+  margin-top: 8px;
+  background-color: #495057;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.left-header .header-item button:hover,
+.right-header .header-item button:hover {
+  background-color: #343a40;
+}
+
+.center-header h1 {
+  text-align: center;
+}
+
+.points-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start; /* Adjusted alignment */
+  margin: 2em 0;
+}
+
+.points-container {
+  display: flex;
+  align-items: flex-start; /* Adjusted alignment */
+}
+
+.points {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.image-container {
+  flex: 1;
+  max-width: 900px;
+}
+
+.candidates,
+.interviewers {
+  text-align: left;
+  padding: 0 20px;
+}
+
+.candidates ul,
+.interviewers ul {
+  list-style: none; /* Remove default list bullets */
+  padding: 0; /* Remove default list padding */
+}
+
+.candidates {
+  margin-right: auto; /* Shift to the left with a margin of 20px */
+}
+
+.interviewers {
+  margin-left: 120px; /* Shift to the right with a margin of 20px */
+}
+
+.candidates li,
+.interviewers li {
+  position: relative;
+  padding-left: 28px; /* Adjust the space for the tick mark */
+  margin-bottom: 14px;
+}
+
+.candidates li::before,
+.interviewers li::before {
+  content: '✔'; /* Unicode character for the check mark */
+  color: #28a745;
+  font-size: 1.5em;
+  position: absolute;
+  left: 0;
+  top: -5px; /* Adjusted position */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.total-statistics {
+  display: flex;
+  justify-content: space-around;
+  margin: 2em 0;
+}
+
+.total-statistics-box {
+  flex: 1;
+  text-align: center;
+  padding: 1em;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: #6fa5d2; /* Adjusted shade of blue color */
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
